@@ -3,9 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Daniel Venancio</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Daniel Venancio - Personal homepage featuring web development resources, my background as a Portuguese-Angolan MTC teacher, and interests in basketball, photography, and nature.">
+    <meta name="author" content="Daniel Venancio">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
-<body>  
-    <h1>WDD 131 - Daniel Venâncio</h1>
+<body>
+
+  <header>
+    <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+    <nav>
+      <a href="https://www.linkedin.com/in/daniel-venâncio-1ba6021aa" target="_blank">LinkedIn</a>
+      <a href="#Canvas">Canvas</a>
+      <a href="#Scripture">Scripture</a>
+      <a href="#FinalProject">Final Project</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Daniel Venâncio</h1>
+
+    <div class="cards-grid">
+
+      <!--Card 1-->
+      <section class="card">
+
+        <!--About Me-->
+        <div class="card-header">About Me</div>
+        <div class="card-body">
+          <div class="about-top">
+            <img src="images/profile.jpg" alt="Daniel Venancio">
+            <div>
+              <p>
+                My name is Daniel Venâncio — half Portuguese, half Angolan, and proud of both roots.
+                I currently live in Luanda, Angola, where I work as an MTC teacher for the South Africa MTC.
+                I love spending time outdoors, whether playing Basketball, capturing moments with my camera, or simply enjoying nature.
+              </p>
+              <div class="tags">
+                <span>Basketball</span>
+                <span>Photography</span>
+                <span>Nature</span>
+                <span>Tech passion</span>
+                <span>Video Gamer</span>
+              </div>
+            </div>
+          </div>
+
+          <hr class="divider">
+
+          <!--Country -->
+          <p class="country-title">Luanda, Angola</p>
+
+          <div class="country-section">
+            <figure>
+              <img src="images/angola.jpg" alt="Official Flag of Angola">
+              <figcaption>Official Flag of Angola</figcaption>
+            </figure>
+            <p>
+              Angola is a country in Southern Africa bordering the Atlantic Ocean. Its capital, Luanda, is one of Africa's most vibrant cities.
+              Angola is rich in natural resources — particularly oil and diamonds — and is home to breathtaking landscapes including the Namib Desert, tropical rainforests, and the stunning Kalandula Falls, one of the largest waterfalls on the continent.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--Card 2-->
+      <section class="card resources-card">
+        <div class="card-header">Web Dev Resources</div>
+        <div class="card-body">
+          <ul>
+            <li><a href="https://www.w3schools.com" target="_blank">W3 Schools</a></li>
+            <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
+            <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
+            <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+            <li><a href="https://www.microsoft.com/en-us/learn" target="_blank">Microsoft Learn</a></li>
+            <li><a href="https://fonts.google.com/" target="_blank">Google Fonts</a></li>
+            <li><a href="https://visualstudio.microsoft.com/" target="_blank">Visual Studio/Copilot</a></li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>©<span id="currentyear"></span> Daniel Venâncio — Angola</p>
+    <p id="lastModified"></p>
+  </footer>
+
 </body>
 </html>
