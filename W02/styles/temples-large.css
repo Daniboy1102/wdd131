@@ -1,0 +1,25 @@
+@media (min-width: 640px) {
+  #hamburger { display: none; }
+
+  #main-nav {
+    display: flex !important;
+    flex-direction: row;
+    width: auto;
+    gap: 0.25rem;
+  }
+
+  #main-nav a {
+    border-top: none;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
