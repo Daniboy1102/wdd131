@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angola - Place Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/place.css" />
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Angola</h1>
+  </header>
+
+  <main>
+    <!--Hero Image-->
+    <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="images/angola-large.webp"
+        />
+        <img
+          src="images/angola-small.webp"
+          alt="Scenic landscape of Angola showing its natural beauty"
+          class="hero-img"
+        />
+      </picture>
+
+    <!--Data Section-->
+    <section class="data-section">
+      <h2>Data</h2>
+      <dl>
+        <dt>Area:</dt>        <dd>1,246,700 sq km</dd>
+        <dt>Population:</dt>  <dd>36,680,000</dd>
+        <dt>Capital:</dt>     <dd>Luanda</dd>
+        <dt>Languages:</dt>   <dd>Portuguese</dd>
+        <dt>Currency:</dt>    <dd>Kwanza (AOA)</dd>
+        <dt>Time Zone:</dt>   <dd>UTC+1</dd>
+        <dt>Calling Code:</dt><dd>+244</dd>
+        <dt>Internet TLD:</dt><dd>.ao</dd>
+      </dl>
+    </section>
+
+    <!--Weather Section-->
+    <section class="weather-section">
+      <h2 class="weather-heading">Weather</h2>
+
+      <!--SVG icon-->
+      <img
+        src="images/sunny.svg"
+        alt="Sunny weather icon"
+        class="weather-icon-svg"
+        width="80"
+        height="80"
+      />
+      
+      <dl>
+        <dt>Temperature:</dt>  <dd>28 °C</dd>
+        <dt>Conditions:</dt>   <dd>Sunny</dd>
+        <dt>Wind:</dt>         <dd>12 km/h</dd>
+        <dt>Wind Chill:</dt>   <dd id="wind-chill">--</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      &copy;<span id="current-year"></span>
+      Daniel &bull; Angola &#127462;&#127476;
+    </p>
+    <p>Last Modification: <span id="last-modified"></span></p>
+  </footer>
+
+</body>
+</html>
