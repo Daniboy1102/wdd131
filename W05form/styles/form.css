@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap');
+
+:root {
+  --color-red:    #cc0000;
+  --color-black:  #111111;
+  --color-yellow: #ffcc00;
+  --color-white:  #ffffff;
+  --color-light:  #f9f5f0;
+  --color-text:   #1a1a1a;
+  --color-muted:  #555555;
+  --color-panel:  rgba(255, 255, 255, 0.93);
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Source Sans 3', 'Segoe UI', sans-serif;
+
+  --radius:     0.5rem;
+  --shadow:     0 4px 20px rgba(0, 0, 0, 0.22);
+  --transition: 0.25s ease;
+}
+
+/* ===== Reset ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-light);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: var(--color-red);
+  border-bottom: 6px solid var(--color-black);
+  text-align: center;
+  padding: 1.25rem 1rem;
+}
+
+header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 3rem);
+  color: var(--color-white);
+  letter-spacing: 0.08em;
+  text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+header .subtitle {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+  letter-spacing: 0.05em;
+}
+
+/* ===== Main ===== */
+main {
+  flex: 1;
+  max-width: 640px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1.25rem 1rem;
+}
+
+/* ===== Form Card ===== */
+form {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.75rem 1.5rem;
+  border-top: 4px solid var(--color-yellow);
+}
+
+form h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--color-black);
+  text-align: center;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 3px solid var(--color-red);
+}
+
+/* ===== Form Groups ===== */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  margin-bottom: 0.35rem;
+}
+
+.optional {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* ===== Inputs, Select, Textarea ===== */
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+  width: 100%;
+  background: var(--color-white);
+  color: var(--color-text);
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  padding: 0.55rem 0.8rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23555' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  padding-right: 2.25rem;
+}
+
+select:focus,
+input[type="date"]:focus,
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-red);
+  box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.12);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+/* ===== Fieldsets ===== */
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem 0.75rem;
+  background: var(--color-light);
+}
+
+legend {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  padding: 0 0.4rem;
+}
+
+/* ===== Star Rating ===== */
+.star-group {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 0.2rem;
+  margin-top: 0.5rem;
+}
+
+.star-group input[type="radio"] {
+  display: none;
+}
+
+.star-group label {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color var(--transition), transform var(--transition);
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.star-group label:hover,
+.star-group label:hover ~ label,
+.star-group input[type="radio"]:checked ~ label {
+  color: var(--color-yellow);
+}
+
+.star-group input[type="radio"]:checked + label {
+  color: var(--color-red);
+}
+
+.star-group label:hover {
+  transform: scale(1.2);
+}
+
+/* ===== Checkboxes ===== */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--color-red);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checkbox-item label {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--color-text);
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+/* ===== Submit Button ===== */
+input[type="submit"] {
+  width: 100%;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.7rem 1.5rem;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background-color var(--transition), box-shadow var(--transition);
+  box-shadow: 0 2px 8px rgba(204, 0, 0, 0.25);
+}
+
+input[type="submit"]:hover {
+  background-color: #aa0000;
+  box-shadow: 0 4px 16px rgba(204, 0, 0, 0.35);
+}
+
+input[type="submit"]:active {
+  transform: translateY(1px);
+}
+
+/* ===== Confirmation Card ===== */
+.confirmation-card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.5rem 1.75rem;
+  border-top: 4px solid var(--color-yellow);
+  text-align: center;
+}
+
+.check-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #fff0f0;
+  border: 2px solid var(--color-red);
+  color: var(--color-red);
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.confirmation-card h2 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--color-black);
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 3px solid var(--color-red);
+  display: inline-block;
+}
+
+.confirm-msg {
+  color: var(--color-text);
+  font-size: 1.05rem;
+  margin: 1rem 0 0.4rem;
+}
+
+.review-count {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.75rem;
+}
+
+.review-count strong {
+  color: var(--color-red);
+}
+
+.btn-back {
+  display: inline-block;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  border-radius: var(--radius);
+  padding: 0.6rem 1.5rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: background-color var(--transition), box-shadow var(--transition);
+  box-shadow: 0 2px 8px rgba(204, 0, 0, 0.25);
+}
+
+.btn-back:hover {
+  background-color: #aa0000;
+  box-shadow: 0 4px 16px rgba(204, 0, 0, 0.35);
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--color-black);
+  color: var(--color-yellow);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.9;
+  margin-top: 1.25rem;
+}
+
+/* ===== Responsive: Tablet+ ===== */
+@media (min-width: 600px) {
+  form {
+    padding: 2rem 2.25rem;
+  }
+
+  .checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.45rem 1.5rem;
+  }
+
+  .confirmation-card {
+    padding: 3rem 3rem;
+  }
+}
