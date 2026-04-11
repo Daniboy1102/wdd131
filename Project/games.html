@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse and filter the best RPG and fantasy games by genre, platform, and difficulty." />
+  <title>RPG Realm — Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/games.css" />
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="RPG Realm Logo" width="45" height="45" />
+        <span>RPG Realm</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html" class="active">Games</a></li>
+        <li><a href="classes.html">Classes &amp; Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <h1>Games <span class="gold">Library</span></h1>
+        <p>Browse, filter, and discover your next RPG adventure.</p>
+      </div>
+    </section>
+
+    <!-- FILTERS -->
+    <section class="filters-section">
+      <div class="filters-inner">
+        <div class="filter-group">
+          <label class="filter-label" for="filter-genre">Genre</label>
+          <select id="filter-genre" class="filter-select">
+            <option value="all">All Genres</option>
+            <option value="Action RPG">Action RPG</option>
+            <option value="RPG">RPG</option>
+            <option value="Open World">Open World</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label" for="filter-difficulty">Difficulty</label>
+          <select id="filter-difficulty" class="filter-select">
+            <option value="all">All Difficulties</option>
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+          </select>
+        </div>
+        <button class="btn btn-outline" id="reset-filters">Reset</button>
+      </div>
+      <p class="results-count" id="results-count"></p>
+    </section>
+
+    <!-- GAMES GRID -->
+    <section class="games-section">
+      <div class="games-grid-full" id="games-grid">
+        <!-- Populated by JavaScript -->
+      </div>
+      <p class="no-results hidden" id="no-results">No games match your filters. Try resetting.</p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="RPG Realm Logo" width="36" height="36" />
+        <span>RPG Realm</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="classes.html">Classes &amp; Quiz</a>
+        <a href="references.html">References</a>
+      </nav>
+      <p class="footer-copy">&copy; <span id="year"></span> RPG Realm — WDD131 Project</p>
+    </div>
+  </footer>
+
+  <script src="scripts/games.js"></script>
+</body>
+</html>

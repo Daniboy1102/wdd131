@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore RPG character classes and take the quiz to find out which hero you are." />
+  <title>RPG Realm — Classes &amp; Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/classes.css" />
+</head>
+<body>
+
+  <!--Nav-->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="RPG Realm Logo" width="45" height="45" />
+        <span>RPG Realm</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="classes.html" class="active">Classes &amp; Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!--Hero-->
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <h1>Classes &amp; <span class="gold">Quiz</span></h1>
+        <p>Learn about every character class, then discover which one fits you.</p>
+      </div>
+    </section>
+
+    <!--Classes-->
+    <section class="section" id="classes">
+      <div class="section-header">
+        <h2>Character Classes</h2>
+      </div>
+      <div class="classes-grid" id="classes-grid">
+        <!-- Populated by JavaScript -->
+      </div>
+    </section>
+
+    <!--Quiz-->
+    <section class="quiz-section" id="quiz">
+      <div class="quiz-inner">
+        <h2>Which Class Are You?</h2>
+        <p class="quiz-intro">Answer four questions and find out which RPG class matches your personality. Your result will be saved.</p>
+
+        <!-- Saved result banner -->
+        <div class="saved-result hidden" id="saved-result">
+          <p>Your saved class: <strong id="saved-class-name"></strong> <span id="saved-class-icon"></span></p>
+          <button class="btn btn-outline" id="retake-btn">Retake Quiz</button>
+        </div>
+
+        <!--Form-->
+        <form class="quiz-form" id="quiz-form" novalidate>
+
+          <div class="quiz-question" id="q1">
+            <p class="question-text">1. You find a dungeon entrance. What do you do?</p>
+            <div class="quiz-options">
+              <label><input type="radio" name="q1" value="warrior" required /> Charge in sword first</label>
+              <label><input type="radio" name="q1" value="mage" /> Study the runes on the door first</label>
+              <label><input type="radio" name="q1" value="rogue" /> Sneak around looking for a side entrance</label>
+              <label><input type="radio" name="q1" value="paladin" /> Say a prayer and enter with shield raised</label>
+            </div>
+          </div>
+
+          <div class="quiz-question" id="q2">
+            <p class="question-text">2. Your party is ambushed. What is your role?</p>
+            <div class="quiz-options">
+              <label><input type="radio" name="q2" value="warrior" /> Draw their attention and take the hits</label>
+              <label><input type="radio" name="q2" value="mage" /> Cast a powerful spell to end it fast</label>
+              <label><input type="radio" name="q2" value="rogue" /> Disappear and strike the enemy leader</label>
+              <label><input type="radio" name="q2" value="paladin" /> Protect the weakest member of the group</label>
+            </div>
+          </div>
+
+          <div class="quiz-question" id="q3">
+            <p class="question-text">3. Which reward would you choose?</p>
+            <div class="quiz-options">
+              <label><input type="radio" name="q3" value="warrior" /> A legendary two-handed sword</label>
+              <label><input type="radio" name="q3" value="mage" /> An ancient spellbook with forbidden knowledge</label>
+              <label><input type="radio" name="q3" value="rogue" /> A cloak that makes you invisible</label>
+              <label><input type="radio" name="q3" value="paladin" /> A shield blessed by the gods</label>
+            </div>
+          </div>
+
+          <div class="quiz-question" id="q4">
+            <p class="question-text">4. How do your teammates describe you?</p>
+            <div class="quiz-options">
+              <label><input type="radio" name="q4" value="warrior" /> Bold and fearless</label>
+              <label><input type="radio" name="q4" value="mage" /> Wise and curious</label>
+              <label><input type="radio" name="q4" value="rogue" /> Clever and resourceful</label>
+              <label><input type="radio" name="q4" value="paladin" /> Loyal and honorable</label>
+            </div>
+          </div>
+
+          <p class="quiz-error hidden" id="quiz-error">Answer all questions before submitting.</p>
+          <button type="submit" class="btn btn-primary">Reveal My Class</button>
+
+        </form>
+
+        <!--Result-->
+        <div class="quiz-result hidden" id="quiz-result">
+          <div class="result-icon" id="result-icon"></div>
+          <h3 id="result-title"></h3>
+          <p id="result-desc"></p>
+          <button class="btn btn-outline" id="retake-btn-2">Retake Quiz</button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!--Footer-->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="RPG Realm Logo" width="36" height="36" />
+        <span>RPG Realm</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="classes.html">Classes &amp; Quiz</a>
+        <a href="references.html">References</a>
+      </nav>
+      <p class="footer-copy">&copy; <span id="year"></span> RPG Realm — WDD131 Project</p>
+    </div>
+  </footer>
+
+  <script src="scripts/classes.js"></script>
+</body>
+</html>

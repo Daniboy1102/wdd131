@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RPG Realm — Your guide to the best RPG and fantasy games." />
+  <title>RPG Realm — Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+  <!--Nav-->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="RPG Realm Logo" width="45" height="45" />
+        <span>RPG Realm</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="classes.html">Classes &amp; Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!--Hero-->
+    <section class="hero">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Welcome to Your Adventure</p>
+        <h1>Enter the <span class="gold">Realm</span></h1>
+        <p class="hero-sub">Discover the greatest RPG and fantasy games, master every character class, and find out which hero you truly are.</p>
+        <div class="hero-btns">
+          <a href="games.html" class="btn btn-primary">Browse Games</a>
+          <a href="classes.html" class="btn btn-outline">Take the Quiz</a>
+        </div>
+      </div>
+    </section>
+
+    <!--Games-->
+    <section class="section" id="featured">
+      <div class="section-header">
+        <h2>Featured Games</h2>
+        <a href="games.html" class="see-all">View All Games →</a>
+      </div>
+      <div class="games-grid" id="featured-games">
+        <!-- Populated by JavaScript -->
+      </div>
+    </section>
+
+    <!-- CHARACTER CLASSES TEASER -->
+    <section class="section classes-teaser">
+      <div class="section-header">
+        <h2>Choose Your Class</h2>
+        <a href="classes.html" class="see-all">View All Classes →</a>
+      </div>
+      <div class="classes-row" id="classes-preview">
+        <!-- Populated by JavaScript -->
+      </div>
+    </section>
+
+    <!--Quiz-->
+    <section class="quiz-cta">
+      <div class="quiz-cta-inner">
+        <h2>Which Hero Are You?</h2>
+        <p>Answer a few questions and discover the RPG character class that matches your personality. Your result is saved so you can always come back.</p>
+        <a href="classes.html#quiz" class="btn btn-primary">Take the Quiz</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!--Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="RPG Realm Logo" width="36" height="36" />
+        <span>RPG Realm</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="classes.html">Classes &amp; Quiz</a>
+        <a href="references.html">References</a>
+      </nav>
+      <p class="footer-copy">&copy; <span id="year"></span> RPG Realm — WDD131 Project</p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
